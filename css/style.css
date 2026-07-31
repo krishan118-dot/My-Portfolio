@@ -143,6 +143,18 @@ input, textarea{ font-family: inherit; font-size: inherit; color: inherit; }
   outline-offset: 3px;
 }
 
+/* ---------- Scroll Reveal ---------- */
+.reveal{
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+  transition-delay: calc(var(--i, 0) * 0.05s);
+}
+.reveal.in-view{
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .btn--primary{
   background: var(--grad-signal-diag);
   color: #04060a;
